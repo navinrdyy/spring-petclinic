@@ -15,7 +15,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                sh 'checkout passed'
+                echo 'checkout passed'
             }
         }
 
