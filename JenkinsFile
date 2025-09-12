@@ -21,7 +21,7 @@ pipeline {
 
         stage('Build and create Jar file') {
             steps {
-                sh 'ls ltr'
+                sh 'ls -ltr'
                 // build the spring project
                 sh 'mvn clean package'
             }
