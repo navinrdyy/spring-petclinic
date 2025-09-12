@@ -6,3 +6,4 @@ ENV MYSQL_ROOT_PASSWORD=navi1335
 ENV MYSQL_DATABASE=petclinic
 
 COPY ./mysql-files/ /docker-entrypoint-initdb.d/
+#end of the dockerfile
