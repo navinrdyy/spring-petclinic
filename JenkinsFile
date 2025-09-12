@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.6-eclipse-temurin-17'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
-    }
+    agent any
 
     stages {
         stage('Hello') {
@@ -23,7 +18,8 @@ pipeline {
             steps {
                 sh 'ls -ltr'
                 // build the spring project
-                sh 'mvn clean package'
+                //sh 'mvn clean package'
+                //sh 'ls -ltr'
             }
         }
 
@@ -44,7 +40,7 @@ pipeline {
             }
         }
 
-        stage('Update Deploymnet File') {
+        stage('Update Deployment File') {
             environment {
                 GIT_REPO_NAME = 'spring-petclinic'
                 GIT_USER_NAME = 'navinrdyy'
