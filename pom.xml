@@ -165,6 +165,9 @@
                   <message>This build requires at least Java ${java.version}, update your JVM, and run the build again</message>
                   <version>${java.version}</version>
                 </requireJavaVersion>
+                <requireNoHttp>
+                  <enabled>false</enabled>
+                </requireNoHttp>
               </rules>
             </configuration>
           </execution>
