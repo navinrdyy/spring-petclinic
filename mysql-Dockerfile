@@ -1,0 +1,8 @@
+FROM mysql:latest
+
+# MYSQL_ROOT_PASSWORD is essential for setting the root user's password
+ENV MYSQL_ROOT_PASSWORD=navi1335
+# Optionally, set a default database name
+ENV MYSQL_DATABASE=petclinic
+
+COPY ./mysql-files/ /docker-entrypoint-initdb.d/
