@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: navinrdyy/springboot-petclinic:22
+        image: navinrdyy/springboot-petclinic:27
         ports:
         - containerPort: 8080
