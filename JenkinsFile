@@ -51,6 +51,7 @@ pipeline {
                         git config user.email "naveenreddy1335@gmail.com"
                         git config user.name "navinrdyy"
                         BUILD_NUMBER=${BUILD_NUMBER}
+                        ls -ltr
                         sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
                         git add spring-boot-app-manifests/deployment.yml
                         git commit -m "Update deployment image to version ${BUILD_NUMBER}"
